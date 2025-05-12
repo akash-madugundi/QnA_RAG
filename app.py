@@ -3,14 +3,17 @@ import re
 import requests
 import streamlit as st
 from dotenv import load_dotenv
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
+import os
+import faiss
+from dotenv import load_dotenv
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings, StorageContext
 from llama_index.core.node_parser import SimpleNodeParser
 from llama_index.embeddings.google_genai import GoogleGenAIEmbedding
 from llama_index.llms.gemini import Gemini
 from llama_index.vector_stores.faiss import FaissVectorStore
 from llama_index.core.retrievers import VectorIndexRetriever
 from llama_index.core.query_engine import RetrieverQueryEngine
-import faiss
+from llama_index.core.response_synthesizers import get_response_synthesizer, ResponseMode
 
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
@@ -23,14 +26,16 @@ Settings.node_parser = SimpleNodeParser.from_defaults()
 
 documents = SimpleDirectoryReader("data").load_data()
 nodes = Settings.node_parser.get_nodes_from_documents(documents)
-
 embedding_dim = 768
 
 faiss_index = faiss.IndexFlatL2(embedding_dim)
 vector_store = FaissVectorStore(faiss_index=faiss_index)
-index = VectorStoreIndex(nodes, vector_store=vector_store)
+storage_context = StorageContext.from_defaults(vector_store=vector_store)
+index = VectorStoreIndex(nodes, storage_context=storage_context)
+
 retriever = VectorIndexRetriever(index=index, similarity_top_k=3)
-query_engine = RetrieverQueryEngine(retriever=retriever)
+response_synthesizer = get_response_synthesizer(response_mode=ResponseMode.TREE_SUMMARIZE)
+query_engine = RetrieverQueryEngine(retriever=retriever, response_synthesizer=response_synthesizer)
 
 def calculator_tool(query: str) -> str:
     try:
@@ -54,7 +59,7 @@ def dictionary_tool(query: str) -> str:
         return f"Error fetching definition: {e}"
 
 st.set_page_config(page_title="RAG-Powered Multi-Agent Q&A Assistant")
-st.title("🔍 RAG-Powered Multi-Agent Q&A Assistant")
+st.title("RAG-Powered Multi-Agent Q&A Assistant")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -83,10 +88,6 @@ if prompt := st.chat_input("Type your question here..."):
 
     with st.chat_message("assistant"):
         st.markdown(f"**Decision:** {decision}")
-        if context:
-            st.markdown("**Retrieved Context:**")
-            for node in context:
-                st.markdown(f"- {node.node.get_content()}")
         st.markdown(f"**Answer:** {response}")
 
     st.session_state.messages.append({"role": "assistant", "content": response})

@@ -1,6 +1,7 @@
 llama-index>=0.10.34
 llama-index-llms-gemini
 llama-index-embeddings-google-genai
+llama-index-vector-stores-faiss
 faiss-cpu
 python-dotenv
 google-generativeai
