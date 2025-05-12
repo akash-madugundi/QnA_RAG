@@ -1,0 +1,55 @@
+Product: XYZ Smartphone
+- Display: 6.5-inch OLED, 1080 x 2400 pixels
+- Processor: Octa-core 2.84 GHz
+- Memory: 8 GB RAM
+- Storage: 128 GB, expandable up to 512 GB via microSD card
+- Battery: 4500 mAh, fast charging (30W)
+- Camera: 48 MP rear, 12 MP front
+- Operating System: Android 11 with custom UI
+- Connectivity: 5G, Wi-Fi 6, Bluetooth 5.0, NFC
+- Colors: Black, Blue, White
+
+Product: ABC Laptop
+- Display: 15.6-inch Full HD (1920x1080), anti-glare
+- Processor: Intel Core i7, 10th Gen (up to 4.9 GHz)
+- Memory: 16 GB DDR4 RAM
+- Storage: 512 GB SSD (PCIe)
+- Battery: 8 hours of continuous usage
+- Graphics: NVIDIA GeForce GTX 1650
+- Ports: 2x USB 3.1, 1x USB-C, HDMI, SD card reader, headphone jack
+- Operating System: Windows 10 Home
+- Weight: 1.8 kg (4 lbs)
+- Colors: Silver, Black
+
+Product: DEF Smartwatch
+- Display: 1.4-inch AMOLED, 320 x 320 pixels
+- Battery Life: 7 days on a single charge
+- Connectivity: Bluetooth 5.0, Wi-Fi
+- Sensors: Heart rate monitor, GPS, accelerometer
+- Storage: 4 GB internal memory
+- Operating System: DEF OS
+- Water Resistance: IP68 (up to 50 meters)
+- Compatibility: Android and iOS
+- Strap: Silicone, adjustable
+- Colors: Black, Pink, Blue
+
+Product: GHI Wireless Earbuds
+- Connectivity: Bluetooth 5.1
+- Battery Life: 5 hours on a single charge, 20 hours with charging case
+- Charging Case: USB-C charging, 30-minute full charge
+- Sound Quality: 12mm dynamic drivers for deep bass and clear treble
+- Water Resistance: IPX4 (sweat and splash-resistant)
+- Weight: 5g per earbud
+- Colors: White, Black
+- Compatibility: Android and iOS
+
+Product: JKL 4K Ultra HD Smart TV
+- Display: 55-inch, 4K UHD (3840 x 2160), LED
+- Refresh Rate: 120Hz
+- Smart Features: Built-in Amazon Alexa, Google Assistant, streaming apps (Netflix, YouTube, etc.)
+- Ports: 4x HDMI, 2x USB, Ethernet, Optical audio out
+- Audio: Dolby Atmos, 20W output
+- Connectivity: Wi-Fi 6, Bluetooth 5.0
+- Operating System: Custom Smart OS (Android-based)
+- Energy Consumption: 120W
+- Colors: Black, Silver

@@ -1,0 +1,51 @@
+Machine Learning (ML) is a subset of artificial intelligence (AI) that allows systems to learn and improve from experience without being explicitly programmed. It focuses on developing algorithms that can analyze data, identify patterns, and make decisions.
+
+There are three main types of Machine Learning:
+1. Supervised Learning: The algorithm learns from labeled training data and predicts outcomes for unseen data.
+2. Unsupervised Learning: The algorithm identifies patterns and relationships in data without labeled outcomes.
+3. Reinforcement Learning: The algorithm learns by interacting with an environment and receiving rewards or penalties.
+
+Key algorithms in Supervised Learning include:
+- Linear Regression
+- Logistic Regression
+- Support Vector Machines (SVM)
+- Decision Trees and Random Forests
+- Neural Networks
+
+Unsupervised Learning techniques include:
+- K-Means Clustering
+- Hierarchical Clustering
+- Principal Component Analysis (PCA)
+- Autoencoders
+
+Reinforcement Learning involves:
+- Agents
+- Environments
+- Policies
+- Reward Functions
+Q-Learning and Deep Q-Networks (DQN) are common techniques.
+
+Common evaluation metrics:
+- Accuracy, Precision, Recall, F1-Score (for classification)
+- Mean Absolute Error (MAE), Mean Squared Error (MSE), R-squared (for regression)
+
+Popular ML libraries and frameworks:
+- scikit-learn (Python)
+- TensorFlow (Google)
+- PyTorch (Meta/Facebook)
+- XGBoost and LightGBM for gradient boosting
+
+Key steps in ML workflow:
+1. Data Collection
+2. Data Cleaning and Preprocessing
+3. Feature Engineering
+4. Model Selection and Training
+5. Model Evaluation
+6. Deployment and Monitoring
+
+Applications of ML include:
+- Image and speech recognition
+- Natural language processing (NLP)
+- Recommendation systems
+- Fraud detection
+- Predictive maintenance
