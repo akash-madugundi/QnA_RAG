@@ -61,3 +61,9 @@ GOOGLE_API_KEY=<your_google_api_key_here>
 ```
 streamlit run app.py
 ```
+
+---
+
+- PFA-
+![image](https://github.com/user-attachments/assets/b982ec2e-8379-4a30-8e86-20ed9081723b)
+
